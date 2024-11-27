@@ -13,4 +13,6 @@
     <color name="beige">#FFF0D1</color>
     <color name="brown_light">#D79B9B</color>
     <color name="brown_dark">#3B3030</color>
+    <color name="red">#EC2D2D</color>
+    <color name="orange">#E8A580</color>
 </resources>

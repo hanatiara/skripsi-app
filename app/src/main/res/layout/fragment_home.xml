@@ -1,22 +1,265 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragment_home"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.home.HomeFragment">
+    android:fillViewport="true"
+    tools:context=".ui.home.HomeFragment"
+    android:paddingBottom="?attr/actionBarSize">
 
-    <TextView
-        android:id="@+id/text_home"
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/home_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/bg_home"
+                        android:layout_width="match_parent"
+                        android:layout_height="320dp"
+                        android:background="@drawable/bg_home"
+                        android:layout_alignParentTop="true">
+
+                    </ImageView>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/blur_effect_overlay"/>
+
+                </FrameLayout>
+                <RelativeLayout
+                    android:id="@+id/text_home"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp">
+
+                    <TextView
+                        android:id="@+id/home_desc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:text="@string/home_description"
+                        android:textSize="16pt"
+                        android:shadowColor="#80000000"
+                        android:shadowDx="4"
+                        android:shadowDy="4"
+                        android:shadowRadius="6"
+                        >
+                    </TextView>
+
+                    <TextView
+                        android:layout_below="@+id/home_desc"
+                        android:id="@+id/home_subtitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:text="@string/home_subtitle"
+                        android:textSize="6pt"
+                        >
+                    </TextView>
+                </RelativeLayout>
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+            <RelativeLayout
+                android:id="@+id/background_home"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="160dp"
+                >
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/foreground_home"
+                    app:cardCornerRadius="16dp"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    app:cardBackgroundColor="@color/white">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="16dp"
+                        android:layout_marginVertical="24dp"
+                        >
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:cardCornerRadius="0dp"
+                            app:cardBackgroundColor="@color/white">
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <com.google.android.material.card.MaterialCardView
+                                    android:id="@+id/card_gallery_home"
+                                    android:elevation="12dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    app:cardBackgroundColor="@color/brown_light"
+                                    app:cardCornerRadius="17dp"
+                                    android:clipChildren="true"
+                                    android:clipToPadding="true"
+                                    android:clickable="true"
+                                    android:focusable="true"
+                                    android:checkable="true">
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:clipChildren="true"
+                                        android:clipToPadding="true">
+                                        <ImageView
+                                            android:id="@+id/bg_home_gallery"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:src="@drawable/bg_home_gallery"
+                                            android:layout_alignParentEnd="true"
+                                            android:alpha="0.8"/>
+                                        <RelativeLayout
+                                            android:id="@+id/text_home_gallery"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_margin="12dp">
+                                            <TextView
+                                                android:id="@+id/gallery_home_description"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="@string/gallery_home_description"
+                                                android:textColor="@color/white"
+                                                android:textSize="28dp"
+                                                android:textStyle="bold|normal"
+                                                android:shadowColor="#80000000"
+                                                android:shadowDx="4"
+                                                android:shadowDy="4"
+                                                android:shadowRadius="6"/>
+                                            <TextView
+                                                android:id="@+id/gallery_home_subtitle"
+                                                android:layout_below="@id/gallery_home_description"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="@string/gallery_home_subtitle"
+                                                android:textColor="@color/white"
+                                                android:textSize="16dp"
+                                                android:shadowColor="#80000000"
+                                                android:shadowDx="4"
+                                                android:shadowDy="4"
+                                                android:shadowRadius="6"/>
+                                        </RelativeLayout>
+
+                                        <com.google.android.material.button.MaterialButton
+                                            android:id="@+id/button_gallery"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_below="@id/text_home_gallery"
+                                            android:layout_alignParentEnd="true"
+                                            android:layout_marginStart="12dp"
+                                            android:layout_marginTop="12dp"
+                                            android:layout_marginEnd="12dp"
+                                            android:layout_marginBottom="12dp"
+                                            android:elevation="8dp"
+                                            android:textColor="@color/white"
+                                            android:backgroundTint="@color/brown"
+                                            android:text="Learn More"
+                                            app:cornerRadius="8dp" />
+                                    </RelativeLayout>
+                                </com.google.android.material.card.MaterialCardView>
+
+                                <com.google.android.material.card.MaterialCardView
+                                    android:id="@+id/card_category_home"
+                                    android:layout_marginTop="24dp"
+                                    android:layout_below="@id/card_gallery_home"
+                                    android:elevation="12dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    app:cardBackgroundColor="@color/orange"
+                                    app:cardCornerRadius="17dp"
+                                    android:clipChildren="true"
+                                    android:clipToPadding="true"
+                                    android:clickable="true"
+                                    android:focusable="true"
+                                    android:checkable="true">
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+
+                                        <ImageView
+                                            android:id="@+id/bg_home_category"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_alignParentEnd="true"
+                                            android:layout_marginStart="18dp"
+                                            android:layout_marginTop="18dp"
+                                            android:layout_marginEnd="22dp"
+                                            android:layout_marginBottom="14dp"
+                                            android:alpha="0.75"
+                                            android:src="@drawable/bg_home_category" />
+
+                                        <RelativeLayout
+                                            android:id="@+id/text_home_category"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_margin="12dp">
+                                            <TextView
+                                                android:id="@+id/category_home_description"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="@string/category_home_description"
+                                                android:textColor="@color/white"
+                                                android:textSize="28dp"
+                                                android:textStyle="bold|normal"
+                                                android:shadowColor="#80000000"
+                                                android:shadowDx="4"
+                                                android:shadowDy="4"
+                                                android:shadowRadius="6"/>
+                                            <TextView
+                                                android:id="@+id/gallery_category_subtitle"
+                                                android:layout_below="@id/category_home_description"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="@string/category_home_subtitle"
+                                                android:textColor="@color/white"
+                                                android:textSize="16dp"
+                                                android:shadowColor="#80000000"
+                                                android:shadowDx="4"
+                                                android:shadowDy="4"
+                                                android:shadowRadius="6"/>
+                                        </RelativeLayout>
+
+                                        <com.google.android.material.button.MaterialButton
+                                            android:id="@+id/button_category"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_below="@id/text_home_category"
+                                            android:layout_alignParentEnd="true"
+                                            android:layout_marginStart="12dp"
+                                            android:layout_marginTop="12dp"
+                                            android:layout_marginEnd="12dp"
+                                            android:layout_marginBottom="12dp"
+                                            android:elevation="8dp"
+                                            android:textColor="@color/white"
+                                            android:backgroundTint="@color/brown"
+                                            android:text="Learn More"
+                                            app:cornerRadius="8dp" />
+                                    </RelativeLayout>
+                                </com.google.android.material.card.MaterialCardView>
+                            </RelativeLayout>
+
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

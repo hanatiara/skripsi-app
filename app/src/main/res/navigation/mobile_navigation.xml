@@ -12,14 +12,14 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.aurea.batikcam.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        android:id="@+id/navigation_deteksi"
+        android:name="com.aurea.batikcam.ui.camera.CameraFragment"
+        android:label="@string/title_deteksi"
+        tools:layout="@layout/fragment_camera" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.aurea.batikcam.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:id="@+id/navigation_riwayat"
+        android:name="com.aurea.batikcam.ui.history.HistoryFragment"
+        android:label="@string/title_riwayat"
+        tools:layout="@layout/fragment_history" />
 </navigation>
