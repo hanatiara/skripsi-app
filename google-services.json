@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1029097007674",
+    "project_id": "batikcam",
+    "storage_bucket": "batikcam.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1029097007674:android:18007a23751107117da303",
+        "android_client_info": {
+          "package_name": "com.aurea.batikcam"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYfvd-sBeA4SHjc2Rol6xvMhTz7Eq2jkg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
