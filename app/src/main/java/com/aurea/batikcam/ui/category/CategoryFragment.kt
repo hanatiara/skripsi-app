@@ -30,7 +30,7 @@ class CategoryFragment : Fragment() {
         recyclerView.layoutManager = LinearLayoutManager(context)
 
         // Set up the adapter
-        adapter = CategoryAdapter(emptyList())
+        adapter = CategoryAdapter(emptyList(),this)
         recyclerView.adapter = adapter
 
         return binding.root

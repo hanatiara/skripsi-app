@@ -35,7 +35,6 @@ class HomeFragment : Fragment() {
 
         homeViewModel.text.observe(viewLifecycleOwner) {
 
-
         }
         return root
     }

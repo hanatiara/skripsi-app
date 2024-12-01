@@ -75,4 +75,9 @@ dependencies {
     implementation ("androidx.room:room-runtime:2.5.0")
     kapt ("androidx.room:room-compiler:2.5.0")
 
+    implementation ("com.jsibbold:zoomage:1.3.1")
+
+    implementation ("org.tensorflow:tensorflow-lite:2.10.0")
+    implementation("org.tensorflow:tensorflow-lite-task-vision:0.3.1")
+    implementation("org.tensorflow:tensorflow-lite-gpu:2.9.0")
 }

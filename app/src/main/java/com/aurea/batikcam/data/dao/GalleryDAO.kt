@@ -19,7 +19,7 @@ interface GalleryDAO {
     fun insertList(galleries: List<Gallery>) // Accepts a list of Gallery objects.
 
     @Query("SELECT * FROM gallery WHERE idGallery IN (:idGallery)")
-    fun loadAllByIds(idGallery: IntArray): List<Gallery> // Retrieves specific entries by their IDs.
+    fun loadAllByIds(idGallery: String): Gallery? // Retrieves specific entries by their IDs.
 
     @Delete
     fun delete(gallery: Gallery) // Deletes a specific Gallery entry.

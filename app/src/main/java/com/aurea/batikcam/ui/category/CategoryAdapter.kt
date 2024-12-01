@@ -1,17 +1,22 @@
 package com.aurea.batikcam.ui.category
 
+import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.aurea.batikcam.R
 import com.aurea.batikcam.data.model.Category
 import com.bumptech.glide.Glide
 
-class CategoryAdapter(private var itemList: List<Category>) :
-    RecyclerView.Adapter<CategoryAdapter.ViewHolder>() {
+class CategoryAdapter(
+    private var itemList: List<Category>,
+    private val fragment: Fragment) : RecyclerView.Adapter<CategoryAdapter.ViewHolder>()
+{
 
     // ViewHolder class that binds the views
     class ViewHolder(categoryView: View) : RecyclerView.ViewHolder(categoryView) {
@@ -43,6 +48,19 @@ class CategoryAdapter(private var itemList: List<Category>) :
         holder.title.text = item.title
         holder.subtitle.text = item.description
 
+        holder.itemView.setOnClickListener {
+            println("Location Clicked: ${item.title}")
+            val detailsFragment = CategoryDetailFragment()
+
+            val bundle = Bundle()
+            bundle.putString("idCategory", item.idCategory)
+            detailsFragment.arguments = bundle
+
+            fragment.parentFragmentManager.beginTransaction()
+                .replace(R.id.nav_host_fragment_activity_main, detailsFragment)
+                .addToBackStack(null) // Add to backstack to allow "back" navigation
+                .commit()
+        }
     }
 
     // Method to update data in the adapter

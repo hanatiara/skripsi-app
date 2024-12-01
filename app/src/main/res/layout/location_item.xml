@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/category_item"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginTop="12dp"
@@ -14,7 +13,7 @@
         app:cardElevation="10dp"
         android:layout_margin="10dp">
         <ImageView
-            android:id="@+id/category_item_image"
+            android:id="@+id/location_item_image"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="centerCrop" />
@@ -29,7 +28,7 @@
 
         <!-- Title Text -->
         <TextView
-            android:id="@+id/category_item_title"
+            android:id="@+id/location_item_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Ini Title"
@@ -41,7 +40,7 @@
 
         <!-- Subtitle Text -->
         <TextView
-            android:id="@+id/category_item_subtitle"
+            android:id="@+id/location_item_subtitle"
             android:text="Ini Subtitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

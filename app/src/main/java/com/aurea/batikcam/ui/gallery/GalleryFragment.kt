@@ -34,7 +34,7 @@ class GalleryFragment : Fragment() {
         recyclerView.layoutManager = GridLayoutManager(context, 3)
 
         // Set up the adapter
-        adapter = GalleryAdapter(emptyList())
+        adapter = GalleryAdapter(emptyList(),this)
         recyclerView.adapter = adapter
 
         return binding.root
@@ -48,6 +48,7 @@ class GalleryFragment : Fragment() {
         viewModel.galleryList.observe(viewLifecycleOwner, Observer { galleryList ->
             adapter.updateData(galleryList)  // Update the adapter with new data
         })
+
     }
 
     override fun onDestroyView() {

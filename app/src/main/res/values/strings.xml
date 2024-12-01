@@ -19,6 +19,7 @@
     </string>
     <string name="gallery_appbar">Galeri</string>
     <string name="category_appbar">Kategori</string>
+    <string name="history_appbar">History</string>
     <string name="title_activity_gallery">GalleryActivity</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>

@@ -6,7 +6,7 @@ import androidx.room.PrimaryKey
 
 @Entity
 data class Gallery(
-    @PrimaryKey(autoGenerate = true) @ColumnInfo(name = "idGallery") val idGallery: Int = 0, // Change to Int
+    @PrimaryKey @ColumnInfo(name = "idGallery") val idGallery: String, // Change to Int
     @ColumnInfo(name = "title") val title: String?,
     @ColumnInfo(name = "image") val image: String?,
     @ColumnInfo(name = "idBatik") val idBatik: String

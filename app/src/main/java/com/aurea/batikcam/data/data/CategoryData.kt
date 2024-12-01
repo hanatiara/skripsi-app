@@ -20,6 +20,12 @@ object CategoryData {
             "Yogyakarta",
             "Yogyakarta adalah ibu kota sekaligus pusat pemerintahan dan perekonomian dari provinsi Daerah Istimewa Yogyakarta, Indonesia. Kota ini adalah kota yang mempertahankan konsep tradisional dan budaya Jawa.",
             "yogyakarta.png"
+        ),
+        Category(
+            "bali",
+            "Bali",
+            "Bali adalah sebuah provinsi di Indonesia yang terletak pada bagian barat Kepulauan Nusa Tenggara dan beribu kota di Kota Denpasar. Pulau Bali, yang merupakan pulau terbesar di Provinsi Bali, memiliki beberapa julukan, di antaranya Pulau Dewata dan Pulau Seribu Pura.",
+            "bali.jpg"
         )
     )
 }
